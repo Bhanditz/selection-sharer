@@ -18,7 +18,9 @@
     "lint:js": "eslint ./src",
     "lint": "run-p lint:*",
     "prettier": "prettier --single-quote --write --print-width=100 src/*.js",
-    "postinstall": "opencollective postinstall"
+    "postinstall": "opencollective postinstall",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -54,7 +56,8 @@
     "stylelint-config-standard": "^17.0.0"
   },
   "dependencies": {
-    "opencollective": "^1.0.3"
+    "opencollective": "^1.0.3",
+    "snyk": "^1.653.0"
   },
   "peerDependencies": {
     "jquery": "^3.2.1"
@@ -69,5 +72,6 @@
     "css-loader": "^0.28.3",
     "style-loader": "^0.18.1",
     "webpack": "^2.6.1"
-  }
+  },
+  "snyk": true
 }
